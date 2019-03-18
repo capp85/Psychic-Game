@@ -11,8 +11,8 @@ var compGuess = letters[Math.floor(Math.random() * letters.length)]; //letters a
 console.log(compGuess + " is the letter ")
 
 document.onkeyup = function (event) { //triggering the function for every letter pushed. 
-  var userGuess = event.key; //
-  userGuesses.push(userGuess);
+  var userGuess = event.key; //saving user guess variable 
+  userGuesses.push(userGuess);//adding buttons used to userGuesses
 
   console.log(userGuess + " is user guess");
   console.log("user guesses so far is " + userGuesses.length, "entries");
@@ -22,8 +22,8 @@ document.onkeyup = function (event) { //triggering the function for every letter
     guessesLeft = 9; //setting a intager data type.
     userGuesses = [];
     wins++; //addition function being triggered to add 1 win to win counter.
-    compGuess = letters[Math.floor(Math.random() * letters.length)];
-    window.alert(" You Win! ");
+    compGuess = letters[Math.floor(Math.random() * letters.length)];//referencing global varibale and putting it into affect.
+    window.alert(" You Win! ");//creates a window to display when user wins
     console.log("second if statement userGuess == compGuess ")
 
   }
@@ -45,7 +45,7 @@ document.onkeyup = function (event) { //triggering the function for every letter
   console.log("user guesses so far is " + userGuesses);
 
   //connect variables to display
-  document.getElementById("wins").innerHTML = ' Wins: ' + wins;
+  document.getElementById("wins").innerHTML = ' Wins: ' + wins; //displaying wins score on page 
 
   document.getElementById("losses").innerHTML = ' Losses: ' + losses;
 
